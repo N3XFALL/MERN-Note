@@ -91,7 +91,7 @@ export function NoteDetails() {
               Content
             </label>
             <textarea
-              className="w-full rounded-[15px] border border-blue-500 bg-blue-500/20 text-white mb-2 p-2 h-24"
+              className="w-full rounded-[15px] border border-blue-500 bg-blue-500/20 text-white mb-2 p-2 min-h-24"
               value={content}
               onChange={(c) => setContent(c.target.value)}
             />
