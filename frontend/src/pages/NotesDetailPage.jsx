@@ -39,6 +39,15 @@ export function NoteDetails() {
     fetchNotes();
   }, [id]);
 
+  useEffect(() => {
+   const textarea = getElementById("content");
+    if(textarea){
+      textarea.style.height = "auto";
+      textarea.style.height = `${textarea.scrollHeight}px`;
+      }
+    }
+  )//for auto scaling based on content text amount
+
   const handleUpdate = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -73,7 +82,7 @@ export function NoteDetails() {
   return (
     <div className="bg-gray-900 min-h-screen">
       <Navbar mode="GoBack" />
-      <div className="mx-auto max-h-auto max-w-6xl p-4">
+      <div className="mx-auto max-w-6xl p-4">
         <div className="border border-blue-500 rounded-[25px] py-4 px-5">
           <h1 className="ml-4 text-[25px] text-white font-bold">Create Note</h1>
           <hr className="my-2 border border-blue-500" />
@@ -91,6 +100,7 @@ export function NoteDetails() {
               Content
             </label>
             <textarea
+              id="content"
               className="w-full resize-none overflow-hidden rounded-[15px] border border-blue-500 bg-blue-500/20 text-white mb-2 p-2 min-h-24"
               value={content}
               onChange={(c) => setContent(c.target.value)}
