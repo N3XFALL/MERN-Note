@@ -5,7 +5,6 @@ import { LoadingComponent } from "../components/LoadingComponent";
 import { useState, useEffect } from "react";
 import api from "../lib/axios";
 import toast from "react-hot-toast";
-import { NoteCard } from "../components/NoteCard";
 
 export function AccountSetup() {
   // const [isRateLimited, setIsRateLimited] = useState(false);
