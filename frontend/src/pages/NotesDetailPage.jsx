@@ -40,13 +40,12 @@ export function NoteDetails() {
   }, [id]);
 
   useEffect(() => {
-   const textarea = getElementById("content");
+    const textarea = document.getElementById("content");
     if(textarea){
       textarea.style.height = "auto";
       textarea.style.height = `${textarea.scrollHeight}px`;
       }
-    }
-  )//for auto scaling based on content text amount
+    }, [content]); //for auto scaling based on content text amount
 
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -84,7 +83,7 @@ export function NoteDetails() {
       <Navbar mode="GoBack" />
       <div className="mx-auto max-w-6xl p-4">
         <div className="border border-blue-500 rounded-[25px] py-4 px-5">
-          <h1 className="ml-4 text-[25px] text-white font-bold">Create Note</h1>
+          <h1 className="ml-4 text-[25px] text-white font-bold">View/Edit Note</h1>
           <hr className="my-2 border border-blue-500" />
           <form onSubmit={handleUpdate}>
             <label className="block text-white text-[20px] font-semibold mb-2">
