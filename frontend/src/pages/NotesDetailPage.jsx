@@ -73,7 +73,7 @@ export function NoteDetails() {
   return (
     <div className="bg-gray-900 min-h-screen">
       <Navbar mode="GoBack" />
-      <div className="mx-auto max-w-6xl p-4">
+      <div className="mx-auto max-h-auto max-w-6xl p-4">
         <div className="border border-blue-500 rounded-[25px] py-4 px-5">
           <h1 className="ml-4 text-[25px] text-white font-bold">Create Note</h1>
           <hr className="my-2 border border-blue-500" />
